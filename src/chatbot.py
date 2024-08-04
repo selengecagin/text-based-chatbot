@@ -2,7 +2,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # Load pre-trained model and tokenizer
-model_name = "microsoft/DialoGPT-medium"  # Upgraded to medium
+model_name = "microsoft/DialoGPT-small"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
@@ -23,11 +23,10 @@ def generate_response(user_input, chat_history_ids):
         pad_token_id=tokenizer.eos_token_id,
         no_repeat_ngram_size=3,
         do_sample=True,
-        top_k=50,
-        top_p=0.9,
-        temperature=0.7,
-        attention_mask=attention_mask,
-        num_return_sequences=1
+        top_k=100,
+        top_p=0.7,
+        temperature=0.8,
+        attention_mask=attention_mask  # Add the attention mask here
     )
 
     # Decode and return the model's response
@@ -46,10 +45,6 @@ def main():
 
         response, chat_history_ids = generate_response(user_input, chat_history_ids)
         print(f"Chatbot: {response}")
-
-        # Limit context to last 5 turns
-        if chat_history_ids.shape[1] > 5 * 128:  # Assuming average turn is less than 128 tokens
-            chat_history_ids = chat_history_ids[:, -5*128:]
 
 if __name__ == "__main__":
     main()

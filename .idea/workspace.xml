@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a45ab32-df14-4354-9845-298db2396a78" name="Changes" comment="Define the function to generate responses">
-      <change beforePath="$PROJECT_DIR$/src/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/chatbot.py" afterDir="false" />
-    </list>
+    <list default="true" id="3a45ab32-df14-4354-9845-298db2396a78" name="Changes" comment="Fix attention mask error" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.chatbot.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"
   }
@@ -82,13 +81,39 @@
       <option name="project" value="LOCAL" />
       <updated>1722778527299</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Define the function to generate responses">
+      <option name="closed" value="true" />
+      <created>1722778547889</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722778547889</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Define the main function to run the chatbot">
+      <option name="closed" value="true" />
+      <created>1722778578021</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722778578021</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix attention mask error">
+      <option name="closed" value="true" />
+      <created>1722778885306</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722778885306</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Import necessary libraries" />
     <MESSAGE value="Load the pre-trained model and tokenizer" />
     <MESSAGE value="Define the function to generate responses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Define the function to generate responses" />
+    <MESSAGE value="Define the main function to run the chatbot" />
+    <MESSAGE value="Fix attention mask error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix attention mask error" />
   </component>
 </project>

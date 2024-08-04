@@ -25,3 +25,16 @@ def generate_response(user_input, chat_history_ids):
 
     response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
     return response, chat_history_ids
+
+def main():
+    print("Chatbot: Hello! I'm a simple chatbot. Type 'quit' to exit.")
+    chat_history_ids = None
+
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == 'quit':
+            print("Chatbot: Goodbye!")
+            break
+
+        response, chat_history_ids = generate_response(user_input, chat_history_ids)
+        print(f"Chatbot: {response}")
